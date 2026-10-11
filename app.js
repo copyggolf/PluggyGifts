@@ -1,5 +1,5 @@
-import {images,ready,paths,sprite,drawSprite,applianceNames} from './visuals.js';
-import {createShuffle,beginSwap,settleSwap,chooseBox,shuffleLayout} from './shuffle-engine.js';
+import {images,ready,paths,sprite,drawSprite,applianceNames} from './visuals.js?v=3';
+import {createShuffle,beginSwap,settleSwap,chooseBox,shuffleLayout} from './shuffle-engine.js?v=3';
 const $=s=>document.querySelector(s),app=$('#app');
 const games=[{id:'catch',name:'Pluggy Catch',thai:'ของขวัญชิ้นนี้ปลั๊กกี้ขอนะ',desc:'รับของขวัญ 3D ให้เต็มกล่อง แล้วหลบ Cable Monster!',time:'3 รอบ · รอบละ 30 วินาที',rules:'รับเครื่องใช้ไฟฟ้า +10 · รับไม่ทัน −5<br>รับ The1 +100 (เพียง 1 ครั้งตลอดเกม)<br>รับ Cable Monster −50 (รอบละ 5 ตัว)<br>ลากนิ้ว / เมาส์ / ปุ่มลูกศรซ้ายขวา'}, {id:'buster',name:'Pluggy Buster',thai:'ทุบราคาพาไปช้อป',desc:'เหรียญ ดีล สายฟ้า และเพชร ทุบให้ทันก่อนหายไป',time:'3 รอบ · รอบละ 30 วินาที',rules:'เหรียญ +10 · ดีล +25 · FLASH +50 · MEGA +100<br>ห้ามทุบปลั๊กกี้! ทุบแล้ว −20<br>แตะ / คลิกเป้าหมาย หรือกดเลข 1–9'}, {id:'shuffle',name:'Pluggy Mystery',thai:'Shuffle · ของขวัญอยู่ไหนน้าาา',desc:'ดูของขวัญให้ดี ตามกล่องให้ทัน แล้วเลือกกล่องที่ใช่',time:'5 ครั้ง · กล่องเพิ่มจาก 3 เป็น 7',rules:'เปิดกล่องให้จำ 3 วินาที แล้วกล่องจะสลับตำแหน่ง<br>รอข้อความ “เลือกกล่อง” แล้วแตะ 1 กล่อง<br>ทายถูก +50 · ทายผิด −20<br>เล่น 5 ครั้ง ความเร็วและจำนวนกล่องเพิ่มขึ้น'}];
 let player='',session=null,dispose=()=>{},keys=new Set(),sound=false,audio,assetsReady=false;
