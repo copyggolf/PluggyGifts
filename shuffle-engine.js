@@ -16,7 +16,7 @@ export function shuffleLayout(count,width,height){
  const size=Math.min(width<550?88:116,(width-30)/cols-5),slots=[];
  for(let r=0;r<rows;r++){
   const n=Math.min(cols,count-r*cols),gap=size+8,start=(width-(n*gap-8))/2;
-  for(let c=0;c<n;c++)slots.push({x:start+c*gap,y:height*(rows===1?.48:.23)+r*(size+48)});
+  for(let c=0;c<n;c++)slots.push({x:start+c*gap,y:Math.min(height*(rows===1?.57:.44),height-(rows*size+(rows-1)*35+25)-14)+r*(size+35)});
  }
  return {size,slots};
 }
