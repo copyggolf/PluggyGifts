@@ -1,4 +1,4 @@
-import {backend} from './config.js?v=5';
+import {backend} from './config.js?v=6';
 export const configured=Boolean(backend.url&&backend.publishableKey);
 export async function api(path,body,token){const r=await fetch(backend.url.replace(/\/$/,'')+path,{method:'POST',headers:{'Content-Type':'application/json',apikey:backend.publishableKey,...((token||backend.publishableKey.startsWith('eyJ'))?{Authorization:'Bearer '+(token||backend.publishableKey)}:{})},body:JSON.stringify(body)});const data=await r.json();if(!r.ok)throw new Error(data.message||data.error_description||'เชื่อมระบบสถิติไม่สำเร็จ');return data}
 const storage=(area,key,fallback)=>{try{let v=area.getItem(key);if(!v){v=fallback();area.setItem(key,v)}return v}catch{return fallback()}};

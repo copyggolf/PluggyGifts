@@ -1,4 +1,4 @@
-import {configured,api} from './analytics.js?v=5';
+import {configured,api} from './analytics.js?v=6';
 const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const labels={catch:'Pluggy Catch',buster:'Pluggy Buster',shuffle:'Pluggy Mystery Shuffle'};
 const date=s=>new Date(s).toLocaleString('th-TH',{timeZone:'Asia/Bangkok'});let auth=null,page=0,report=null,timer=null,inflight=false,rerun=false,filters={};
