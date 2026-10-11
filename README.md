@@ -1,6 +1,6 @@
 # Power of Gifts With Pluggy
 
-เว็บเกมภาษาไทยสำหรับมือถือและคอมพิวเตอร์ เปิด dist/index.html ผ่าน HTTP server หรือโฮสต์ dist/ บน static hosting ได้ทันที ไม่มีขั้นตอน build และไม่มี API key
+เว็บเกมภาษาไทยสำหรับมือถือและคอมพิวเตอร์ เปิด index.html ผ่าน HTTP server หรือโฮสต์โฟลเดอร์ repository บน static hosting ได้ทันที ไม่มีขั้นตอน build และไม่มี API key
 
 ## กติกา
 - Catch: 3 รอบ รอบละ 30 วินาที รับ +10 พลาด −5 สายไฟ −50 (5 ตัว/รอบ) The1 +100 (ครั้งเดียวในรอบที่ 2)
@@ -18,5 +18,12 @@ Shuffle: แตะ/คลิก หรือเลขตำแหน่งจา
 เกมหยุดชั่วคราวเมื่อหน้าเว็บถูกซ่อนหรือเสียโฟกัส
 
 ## เผยแพร่
-Sites ใช้ .openai/hosting.json สำหรับ identity และ dist/ สำหรับไฟล์ที่เผยแพร่
-สามารถนำ dist/ ไปใช้ GitHub Pages, Cloudflare Pages หรือ static hosting อื่นได้
+GitHub Pages เผยแพร่จาก main และ / (root) ผ่าน Settings → Pages
+ลิงก์เกม: https://copyggolf.github.io/PluggyGifts/
+เมื่ออัปเดตไฟล์ใน main ระบบจะเผยแพร่ให้อัตโนมัติ
+
+## ตรวจสอบแล้ว
+- เกม Shuffle เล่นครบ 5 ครั้งในเบราว์เซอร์ ตรวจกรณีถูก/ผิดและผลรวม
+- จำลอง Catch ครบ 3 รอบ ตรวจ Cable Monster 15 ตัว และ The1 ครั้งเดียว พร้อมผลรวมคะแนน
+- จำลอง Buster ตรวจพักเกมและคะแนนจากการทุบหนึ่งครั้งต่อเป้าหมาย ครบ 3 รอบ
+- ตรวจรูปแบบหน้าจอขนาด 390×844
