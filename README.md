@@ -37,3 +37,6 @@ Original Pluggy poses from the user-authorized Drive folder, supplied hammer mas
 - PostgreSQL-compatible local database: public table reads denied; non-owner report denied; visit secret checked; invalid results rejected; duplicate results not counted twice; owner totals, presence timeout and filters.
 - Browser: responsive 390px layout without horizontal overflow, illustrated rules, game stage, separate audio switches, full Shuffle results, actual PNG download.
 - Supabase cloud integration requires the owner's project and must be checked after installation; no live cloud project was available during this release.
+
+
+Mission covers and backgrounds now have independent WebP files under assets/missions/. See CHANGE-ART-TH.md for the Thai replacement guide. Approved Concept A production prompts are recorded in ART-PROMPTS.md.
