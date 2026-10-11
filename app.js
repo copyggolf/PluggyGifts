@@ -1,10 +1,10 @@
-import {images,ready,paths,sprite,drawSprite,applianceNames} from './visuals.js?v=6';
-import {createShuffle,beginSwap,settleSwap,chooseBox,shuffleLayout} from './shuffle-engine.js?v=6';
+import {images,ready,paths,sprite,drawSprite,applianceNames} from './visuals.js?v=7';
+import {createShuffle,beginSwap,settleSwap,chooseBox,shuffleLayout} from './shuffle-engine.js?v=7';
 const $=s=>document.querySelector(s),app=$('#app');
-import {games,signNames,signScores} from './game-config.js?v=6';
-import {GameAudio} from './audio.js?v=6';
-import {Analytics,configured} from './analytics.js?v=6';
-import {makeScoreCard,downloadBlob} from './score-card.js?v=6';
+import {games,signNames,signScores} from './game-config.js?v=7';
+import {GameAudio} from './audio.js?v=7';
+import {Analytics,configured} from './analytics.js?v=7';
+import {makeScoreCard,downloadBlob} from './score-card.js?v=7';
 let player='',session=null,dispose=()=>{},keys=new Set(),assetsReady=false;
 const gameRenderers={catch:catchGame,buster:busterGame,shuffle:shuffleGame};
 const audio=new GameAudio(),analytics=new Analytics();analytics.start();

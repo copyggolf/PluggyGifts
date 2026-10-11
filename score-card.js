@@ -1,4 +1,4 @@
-import {images,ready} from './visuals.js?v=6';
+import {images,ready} from './visuals.js?v=7';
 export async function makeScoreCard({name,game,score,rounds,praise}){
  await ready;await document.fonts.ready;const c=document.createElement('canvas');c.width=1080;c.height=1350;const x=c.getContext('2d');
  const g=x.createLinearGradient(0,0,1080,1350);g.addColorStop(0,'#352060');g.addColorStop(1,'#12091f');x.fillStyle=g;x.fillRect(0,0,1080,1350);
