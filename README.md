@@ -43,3 +43,6 @@ Mission covers and backgrounds now have independent WebP files under assets/miss
 
 
 Daily opt-in leaderboards, equal-weight normalized scores, extended owner analytics and Android PNG export: see RANKINGS-TH.md. Existing installs run backend/upgrade-rankings.sql once; new installs run backend/schema.sql then that upgrade. No private historical scores are made public.
+
+
+Current public leaderboard offers today and this week (Monday–Sunday, Asia/Bangkok). New game starts include nickname/score in rankings after the visible start notice; no checkbox or province form. Existing private historical results remain private. Run backend/upgrade-weekly.sql after the rankings migration for fresh setups.

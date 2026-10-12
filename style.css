@@ -25,3 +25,7 @@
 @media(max-width:720px){.leaderboard{padding:17px}.rank-heading{display:block}.rank-heading h2{font-size:20px}.rank-heading>.secondary{margin:5px 0}.rank-table{font-size:11px}.rank-table th,.rank-table td{padding:12px 7px}.rank-consent{font-size:10px}.record-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.record-grid strong{font-size:24px}.hero{min-height:780px}}
 
 [hidden]{display:none!important}
+
+/* Keep the campaign title together across phone and desktop. */
+.hero .herocopy{max-width:750px}.hero h1{font-size:clamp(34px,4.3vw,58px)}.gift-title{white-space:nowrap;display:block}.rank-periods{display:flex;gap:7px;padding:5px;border:1px solid #ab7bd933;border-radius:25px}
+@media(max-width:720px){.hero{min-height:690px}.hero .herocopy{padding:330px 20px 28px}.hero h1{font-size:clamp(26px,7.5vw,45px);letter-spacing:-1px}.hero h1 small{font-size:19px}}
