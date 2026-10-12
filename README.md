@@ -40,3 +40,6 @@ Original Pluggy poses from the user-authorized Drive folder, supplied hammer mas
 
 
 Mission covers and backgrounds now have independent WebP files under assets/missions/. See CHANGE-ART-TH.md for the Thai replacement guide. Approved Concept A production prompts are recorded in ART-PROMPTS.md.
+
+
+Daily opt-in leaderboards, equal-weight normalized scores, extended owner analytics and Android PNG export: see RANKINGS-TH.md. Existing installs run backend/upgrade-rankings.sql once; new installs run backend/schema.sql then that upgrade. No private historical scores are made public.
