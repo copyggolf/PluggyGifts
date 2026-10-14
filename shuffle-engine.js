@@ -9,7 +9,7 @@ export function beginSwap(state,random=Math.random){
  state.pair={a,b,fromA:state.slots[a],fromB:state.slots[b]};state.elapsed=0;state.phase='swapping';return state.pair;
 }
 export function settleSwap(state){if(!state.pair)return;const {a,b}=state.pair;[state.slots[a],state.slots[b]]=[state.slots[b],state.slots[a]];state.pair=null;state.completed++;state.elapsed=0;state.phase='between';}
-export function chooseBox(state,id){if(state.phase!=='choose'||state.answered||!Number.isInteger(id)||id<0||id>=state.count)return null;state.answered=true;state.phase='answer';state.elapsed=0;return {correct:id===state.target,delta:id===state.target?50:-20,target:state.target,slot:state.slots[state.target]};}
+export function chooseBox(state,id){if(state.phase!=='choose'||state.answered||!Number.isInteger(id)||id<0||id>=state.count)return null;state.answered=true;state.phase='answer';state.elapsed=0;return {correct:id===state.target,delta:id===state.target?400:-160,target:state.target,slot:state.slots[state.target]};}
 
 export function shuffleLayout(count,width,height){
  const cols=width<550?Math.min(count,4):count,rows=Math.ceil(count/cols);
