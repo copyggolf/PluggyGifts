@@ -1,3 +1,5 @@
+> รุ่นปัจจุบันต้องติดตั้ง backend/upgrade-festive.sql ต่อจากสคริปต์เดิม เพื่อรองรับการเล่นสั้น คะแนน 1,000 และคูปอง ดู [FESTIVE-TH.md](FESTIVE-TH.md)
+
 # เปิดระบบสถิติ Power of Gifts With Pluggy
 
 เว็บ PluggyGifts เชื่อม Supabase แล้ว เริ่มบันทึกการเข้าชมและการเล่นตั้งแต่เปิดระบบวันที่ 11 ตุลาคม 2569 เปิด https://copyggolf.github.io/PluggyGifts/admin.html เพื่อดูรายงานด้วยบัญชีเจ้าของเว็บที่สร้างไว้ใน Authentication > Users รหัสผ่านเป็นรหัสที่ตั้งสำหรับบัญชีนี้ ข้อมูลก่อนเปิดระบบไม่ได้ถูกเก็บย้อนหลัง

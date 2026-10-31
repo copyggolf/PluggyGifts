@@ -1,3 +1,9 @@
+# Festive quick-play (พฤศจิกายน 2569)
+
+เวอร์ชันปัจจุบัน: Catch/Buster 25 วินาทีรอบเดียว, Mystery 2 ครั้ง, คะแนนเต็มเกมละ 1,000 ไม่มีอันดับบนหน้าแรก และจัดการคูปองหลังจบเกมได้ในหน้า admin.html ดู [คู่มือภาษาไทย](FESTIVE-TH.md) สำหรับการใช้งานและติดตั้งฐานข้อมูล
+
+## เอกสารรุ่นก่อนหน้า
+
 # Power of Gifts With Pluggy — Festive Edition
 
 Responsive Thai mini-game portal at https://copyggolf.github.io/PluggyGifts/
