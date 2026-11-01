@@ -1,3 +1,5 @@
+> อัปเดตล่าสุด: ใช้คะแนนตามจริงโดยไม่ตัดที่ 1,000 บันทึกผ่าน pluggy_start_v5 / pluggy_result_v5; รายงานและ CSV แสดงคะแนนที่บันทึกจริง ติดตั้ง backend/upgrade-actual-scores.sql ต่อจาก upgrade-festive.sql ภาพสินค้าใช้ไฟล์แยกชิ้นจาก All Product (เว้นกล้องตามเงื่อนไขเดิม) และ KV กดไปเว็บไซต์ Power Buy
+
 > รุ่นปัจจุบันต้องติดตั้ง backend/upgrade-festive.sql ต่อจากสคริปต์เดิม เพื่อรองรับการเล่นสั้น คะแนน 1,000 และคูปอง ดู [FESTIVE-TH.md](FESTIVE-TH.md)
 
 # เปิดระบบสถิติ Power of Gifts With Pluggy
