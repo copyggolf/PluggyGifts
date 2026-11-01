@@ -1,4 +1,4 @@
-import {mountPromotion} from './promotion-admin.js?v=20';
+import {mountPromotion} from './promotion-admin.js?v=22';
 import {configured,api} from './analytics.js?v=21';
 import {games} from './game-config.js?v=21';
 const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));

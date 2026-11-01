@@ -1,4 +1,4 @@
-import {campaignHTML,mountCoupon} from './campaign.js?v=21';
+import {campaignHTML,mountCoupon} from './campaign.js?v=22';
 import {prepareScoreExport,mountScoreExport} from './score-export.js?v=12';
 import {images,ready,paths,sprite,drawSprite,applianceNames,drawProduct,productSprite} from './visuals.js?v=21';
 import {createShuffle,beginSwap,settleSwap,chooseBox,shuffleLayout} from './shuffle-engine.js?v=20';
