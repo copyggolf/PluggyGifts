@@ -9,3 +9,17 @@ export function productSprite(index){const p=products[index];return `<img class=
 export function drawProduct(ctx,index,x,y,size){const im=productImages[index];if(im)ctx.drawImage(im,x-size/2,y-size/2,size,size)}
 export function sprite(index,{promo=false,classes='',label=''}={}){const festive=index>=32,extra=index>=16&&!festive,n=promo||festive?2:4,i=festive?index-32:extra?index-16:index,x=i%n,y=Math.floor(i/n);return `<span role="img" aria-label="${label}" data-sprite="${index}" class="sprite ${promo?'promo':''} ${extra?'extra':''} ${festive?'festive-product':''} ${classes}" style="--sx:${x/(n-1)*100}%;--sy:${y/(n-1)*100}%"></span>`}
 export function drawSprite(ctx,index,x,y,size,promo=false){const festive=index>=32,extra=index>=16&&!festive,im=images[promo?'promos':festive?'festiveProducts':extra?'extra':'atlas'];if(!im)return;const n=promo||festive?2:4,i=festive?index-32:extra?index-16:index,sw=im.width/n,sh=im.height/n;ctx.drawImage(im,i%n*sw,Math.floor(i/n)*sh,sw,sh,x-size/2,y-size/2,size,size)}
+
+export const busterItems=[
+{name:'แอร์',src:'assets/update/products/product-17.webp',hit:true},
+{name:'ตู้เย็น',src:'assets/update/products/product-14.webp',hit:true},
+{name:'ทีวี',src:'assets/update/products/product-02.webp',hit:true},
+{name:'มือถือ',src:'assets/update/products/product-05.webp',hit:true},
+{name:'หูฟัง',src:'assets/update/products/product-03.webp',hit:true},
+{name:'เตารีด',src:'assets/products-v2/iron.webp',hit:true},
+{name:'เกม',src:'assets/update/products/product-09.webp',hit:true},
+{name:'เสื้อผ้า',src:'assets/products-v2/clothing.webp',hit:false},
+{name:'หนังสือ',src:'assets/products-v2/book.webp',hit:false},
+{name:'ก๋วยเตี๋ยว',src:'assets/products-v2/noodles.webp',hit:false},
+{name:'ต้นไม้',src:'assets/products-v2/plant.webp',hit:false}];
+export const busterReady=Promise.all(busterItems.map(async p=>{const i=new Image();i.src=p.src;await i.decode()}));
