@@ -1,7 +1,7 @@
-import {api,configured} from './analytics.js?v=25';
-import {games} from './game-config.js?v=25';
-import {paths,images,ready} from './visuals.js?v=25';
-import {displayFields,cleanDisplay,escapeText} from './display-schema.js?v=25';
+import {api,configured} from './analytics.js?v=26';
+import {games} from './game-config.js?v=26';
+import {paths,images,ready} from './visuals.js?v=26';
+import {displayFields,cleanDisplay,escapeText} from './display-schema.js?v=26';
 const originals={paths:{...paths},games:JSON.parse(JSON.stringify(games))};
 let documentConfig={},lastApply=0;
 export const isDisplayPreview=()=>new URLSearchParams(location.search).get('display-preview')==='1'&&window.parent!==window;

@@ -1,8 +1,8 @@
-import {mountDisplayEdit} from './display-admin.js?v=25';
-import {mountRankAdmin} from './rank-admin.js?v=25';
-import {mountPromotion} from './promotion-admin.js?v=25';
-import {configured,api} from './analytics.js?v=25';
-import {games,catchModes} from './game-config.js?v=25';
+import {mountDisplayEdit} from './display-admin.js?v=26';
+import {mountRankAdmin} from './rank-admin.js?v=26';
+import {mountPromotion} from './promotion-admin.js?v=26';
+import {configured,api} from './analytics.js?v=26';
+import {games,catchModes} from './game-config.js?v=26';
 const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const labels=Object.fromEntries(games.map(g=>[g.id,g.name]));
 const num=n=>Number(n||0).toLocaleString('th-TH'),date=s=>s?new Date(s).toLocaleString('th-TH',{timeZone:'Asia/Bangkok'}):'—';

@@ -1,6 +1,6 @@
-import {api} from './analytics.js?v=25';
-import {games,catchModes} from './game-config.js?v=25';
-import {escapeText as esc} from './display-schema.js?v=25';
+import {api} from './analytics.js?v=26';
+import {games,catchModes} from './game-config.js?v=26';
+import {escapeText as esc} from './display-schema.js?v=26';
 const num=n=>Number(n||0).toLocaleString('th-TH');
 export function mountRankAdmin(root,getToken){let state=null,page=0,search='',busy=false;root.innerHTML=`<div class="panel-heading"><h3>แก้ไขตารางอันดับ</h3><button class="secondary" id="rank-owner-reload">รีเฟรชอันดับ</button></div><p>แก้ชื่อหรือคะแนนในตารางอันดับ ลบออก / กู้คืนได้ · คะแนนประวัติการเล่นจริงยังอยู่ครบ</p><form id="rank-search-form" class="rank-search"><input id="rank-owner-search" placeholder="ค้นชื่อผู้เล่น" maxlength="30" aria-label="ค้นชื่อในอันดับ"><button class="secondary">ค้นหา</button></form><p id="rank-owner-status" role="status"></p><div class="tablewrap" id="rank-owner-table"></div><div class="admin-toolbar"><button id="rank-owner-prev" class="secondary">← ก่อนหน้า</button><span id="rank-owner-page"></span><button id="rank-owner-next" class="secondary">ถัดไป →</button></div><details><summary>ประวัติการแก้ไขอันดับล่าสุด</summary><div id="rank-audit"></div></details>`;const $=s=>root.querySelector(s);
  async function load(){if(busy)return;busy=true;try{state=await api('/rest/v1/rpc/pluggy_rank_owner',{p_page:page,p_search:search},await getToken());render();$('#rank-owner-status').textContent='ข้อมูลจริงจากคะแนนที่บันทึกไว้'}catch(e){$('#rank-owner-status').textContent='โหลดอันดับไม่สำเร็จ · '+e.message}finally{busy=false}}
