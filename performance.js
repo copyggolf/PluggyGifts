@@ -1,6 +1,6 @@
-import {api,configured} from './analytics.js?v=26';
-import {games,catchModes} from './game-config.js?v=26';
-import {displayText} from './display.js?v=26';
+import {api,configured} from './analytics.js?v=27';
+import {games,catchModes} from './game-config.js?v=27';
+import {displayText} from './display.js?v=27';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])),num=n=>Number(n||0).toLocaleString('th-TH');
 const label=r=>(games.find(g=>g.id===r.game)?.name||r.game)+' · '+(catchModes[r.mode]?.name||'ปกติ');
 const snapshots=new Map();

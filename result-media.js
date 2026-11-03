@@ -1,3 +1,2 @@
-import {makeCouponCard,combineResultCards} from './score-card.js?v=26';
-import {prepareMediaBundle} from './score-export.js?v=26';
-export async function prepareResultMedia(scoreBlob,card,coupon){const base='Pluggy-'+String(card.score),entries=[{kind:'score',label:'คะแนนอย่างเดียว',filename:base+'-score.png',blob:scoreBlob}];let couponError=false;if(coupon&&(coupon.image||coupon.code)){try{const couponBlob=await makeCouponCard(coupon),combined=await combineResultCards(scoreBlob,couponBlob);entries.unshift({kind:'combined',label:'คะแนนพร้อมคูปอง',filename:base+'-score-and-coupon.png',blob:combined});entries.push({kind:'coupon',label:'คูปองอย่างเดียว',filename:'PowerBuy-coupon.png',blob:couponBlob})}catch{couponError=true}}const bundle=await prepareMediaBundle(entries,card);bundle.couponError=couponError;return bundle}
+import {prepareMediaBundle} from './score-export.js?v=27';
+export async function prepareResultMedia(scoreBlob,card){return prepareMediaBundle([{kind:'score',label:'คะแนน',filename:'Pluggy-'+String(card.score)+'-score.png',blob:scoreBlob}],card,{defaultKind:'score'})}

@@ -1,4 +1,4 @@
-import {images,ready} from './visuals.js?v=26';
+import {images,ready} from './visuals.js?v=27';
 export async function makeScoreCard({name,game,score,rounds,praise}){
  await ready;await document.fonts.ready;const c=document.createElement('canvas');c.width=1080;c.height=1350;const x=c.getContext('2d');
  const g=x.createLinearGradient(0,0,1080,1350);g.addColorStop(0,'#352060');g.addColorStop(1,'#12091f');x.fillStyle=g;x.fillRect(0,0,1080,1350);
@@ -29,7 +29,7 @@ export async function makeCouponCard(coupon){
  if(codes.length){x.fillStyle='#e1c9f1';x.font='500 25px "Noto Sans Thai",sans-serif';x.fillText('โค้ดส่วนลด',540,y+18);y+=75;x.fillStyle='#ffd08b';x.font='900 58px "Noto Sans Thai",sans-serif';for(const line of codes){x.fillText(line,540,y,930);y+=76}y+=10}
  x.fillStyle='#efddf8';x.textAlign='left';x.font='400 25px "Noto Sans Thai",sans-serif';if(coupon.terms){for(const line of terms){x.fillText(line,60,y,960);y+=36}y+=25}
  x.textAlign='center';if(coupon.ends_at){x.fillStyle='#ffd08b';x.font='600 25px "Noto Sans Thai",sans-serif';x.fillText('ใช้ได้ถึง '+new Date(coupon.ends_at).toLocaleString('th-TH',{timeZone:'Asia/Bangkok'})+' น.',540,y+25,960);y+=75}
- x.fillStyle='#dbc3ed';x.font='500 26px "Noto Sans Thai",sans-serif';x.fillText('ใช้โค้ดตามเงื่อนไขที่ Power Buy กำหนด',540,c.height-80,960);x.fillStyle='#ffce88';x.fillText('www.powerbuy.co.th',540,c.height-44,960);return canvasBlob(c);
+ x.fillStyle='#dbc3ed';x.font='500 26px "Noto Sans Thai",sans-serif';x.fillText('ใช้สิทธิ์ตามเงื่อนไขที่ Power Buy กำหนด',540,c.height-80,960);x.fillStyle='#ffce88';x.fillText('www.powerbuy.co.th',540,c.height-44,960);return canvasBlob(c);
 }
 async function decodeResultBlob(blob){if(typeof createImageBitmap==='function')return createImageBitmap(blob);const url=URL.createObjectURL(blob),im=new Image();im.src=url;try{await im.decode();im.close=()=>URL.revokeObjectURL(url);return im}catch(e){URL.revokeObjectURL(url);throw e}}
 export async function combineResultCards(scoreBlob,couponBlob){const [a,b]=await Promise.all([decodeResultBlob(scoreBlob),decodeResultBlob(couponBlob)]);try{const c=document.createElement('canvas');c.width=1080;c.height=Math.round(a.height*1080/a.width+b.height*1080/b.width+24);const x=c.getContext('2d');x.fillStyle='#160d27';x.fillRect(0,0,c.width,c.height);const h=Math.round(a.height*1080/a.width);x.drawImage(a,0,0,1080,h);x.drawImage(b,0,h+24,1080,c.height-h-24);return canvasBlob(c)}finally{a.close();b.close()}}
