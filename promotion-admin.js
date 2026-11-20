@@ -1,5 +1,5 @@
-import {api} from './analytics.js?v=27';
-import {escapeHTML,safeShopURL} from './campaign.js?v=27';
+import {api} from './analytics.js?v=28';
+import {escapeHTML,safeShopURL} from './campaign.js?v=28';
 const thaiInput=s=>s?new Date(new Date(s).getTime()+7*3600000).toISOString().slice(0,16):'';
 const stamp=v=>v?new Date(v+':00+07:00').toISOString():null;
 export function mountPromotion(root,getToken){let state=null,rows=[],active=1,busy=false,uploading=false;

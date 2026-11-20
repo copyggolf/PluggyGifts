@@ -1,4 +1,4 @@
-import {rememberExport} from './export-store.js?v=27';
+import {rememberExport} from './export-store.js?v=28';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export const blobDataURL=blob=>new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=reject;reader.readAsDataURL(blob)});
 export function scoreViewURL(card,exportId=null,kind='score'){const u=new URL('score-view.html',location.href);const payload={name:card.name,game:card.game,score:card.score,rounds:card.rounds,praise:card.praise,scoreVersion:card.scoreVersion};if(exportId)payload.exportId=exportId;payload.viewKind='score';u.hash=encodeURIComponent(JSON.stringify(payload));return u.href}

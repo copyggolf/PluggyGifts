@@ -1,6 +1,6 @@
-import {images,ready} from './visuals.js?v=27';
+import {images,loadScoreAssets} from './visuals.js?v=28';
 export async function makeScoreCard({name,game,score,rounds,praise}){
- await ready;await document.fonts.ready;const c=document.createElement('canvas');c.width=1080;c.height=1350;const x=c.getContext('2d');
+ await loadScoreAssets();await document.fonts.ready;const c=document.createElement('canvas');c.width=1080;c.height=1350;const x=c.getContext('2d');
  const g=x.createLinearGradient(0,0,1080,1350);g.addColorStop(0,'#352060');g.addColorStop(1,'#12091f');x.fillStyle=g;x.fillRect(0,0,1080,1350);
  x.globalAlpha=.23;x.drawImage(images.showroom,0,0,1080,720);x.globalAlpha=1;
  x.strokeStyle='#a47ddd';x.lineWidth=3;x.beginPath();x.roundRect(36,36,1008,1278,40);x.stroke();
